@@ -15,4 +15,8 @@ st.title("Card Ranking Comparison Tool")
 
 gitview = pd.read_csv('https://raw.githubusercontent.com/baptistegalaup/MTG-Card-Ranking/main/log2302.csv', sep=",")
 
-gitview
+# gitview
+
+card1 = st.text_input('Card 1')
+
+st.write(gitview['Name'].str.contains(card1))
