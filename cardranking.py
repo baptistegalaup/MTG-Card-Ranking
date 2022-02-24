@@ -13,6 +13,6 @@ import pandas as pd
 
 st.title("Card Ranking Comparison Tool")
 
-overview = pd.read_csv(r"C:\Users\Baptiste\Documents\Projets autour de MTG\Projet card ranking\intro.csv", sep=",")
+gitview = pd.read_csv('https://raw.githubusercontent.com/baptistegalaup/MTG-Card-Ranking/main/log2302.csv', sep=",")
 
-overview
+gitview
