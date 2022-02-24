@@ -21,4 +21,4 @@ card1 = st.text_input('Card 1')
 
 proc1 = gitview['Name'].str.contains(card1)
 
-proc2 = gitview[proc1].loc[gitview[proc1]]
+proc2 = gitview[proc1]
