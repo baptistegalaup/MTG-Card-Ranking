@@ -26,3 +26,6 @@ proc2 = gihwr[proc1]
 
 st.write(proc2)
 
+color = proc2['Color']
+
+gitview.loc[(gitview['Color'] == color) & (gitview['Rarity'] == 'Common' & (gitview['GIH WR'] >= 60%)
