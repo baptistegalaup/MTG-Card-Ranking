@@ -29,7 +29,7 @@ st.write(proc2)
 color = proc2['Color']
 
 gitview['gihwrnum'] = gitview['GIH WR'].replace('%','')
-gitview['gihwrnum'] = gitview['gihwrnum'].apply(int)
+gitview['gihwrnum'] = gitview['gihwrnum'].apply(float)
 
 gitview
 
