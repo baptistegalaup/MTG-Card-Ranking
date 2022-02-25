@@ -63,7 +63,7 @@ with col3:
   st.header('Best Common in any Color')
   st.write(univsupportc[['Name', 'GIH WR']])
 
-whith col4:
+with col4:
   
   st.header('Best Uncommon in any Color')
   st.write(univsupportu[['Name', 'GIH WR']])
