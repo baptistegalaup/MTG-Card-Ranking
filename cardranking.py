@@ -43,7 +43,7 @@ card3 = st.text_input('Card 3')
 proc5 = gihwr['Name'].str.contains(card3.title())
 proc6 = gihwr[proc5]
 
-st.write(proc5)
+st.write(proc6)
 
 
 gitview = gitview.replace({'GIH WR': r'%'}, {'GIH WR' : ''}, regex=True)
