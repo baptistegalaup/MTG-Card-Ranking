@@ -31,12 +31,19 @@ for i in color:
   
   color = i
   
-card2 = st.text_input('Card2')
+card2 = st.text_input('Card 2')
 
 proc3 = gihwr['Name'].str.contains(card2.title())
 proc4 = gihwr[proc3]
 
 st.write(proc4)
+
+card3 = st.text_input('Card 3')
+
+proc5 = gihwr['Name'].str.contains(card3.title())
+proc6 = gihwr[proc5]
+
+st.write(proc5)
 
 
 gitview = gitview.replace({'GIH WR': r'%'}, {'GIH WR' : ''}, regex=True)
