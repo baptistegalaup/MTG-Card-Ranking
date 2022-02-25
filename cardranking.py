@@ -56,8 +56,6 @@ with col2:
 univsupportc = gitview.loc[(gitview['Rarity'] == 'C') & (gitview['GIH WR'] >= 50)]
 univsupportu = gitview.loc[(gitview['Rarity'] == 'U') & (gitview['GIH WR'] >= 50)]
 
-univsupportc['GIH WR'] = univsupportc['GIH WR'].sort_values(ascending=False)
-univsupportu['GIH WR'] = univsupportu['GIH WR'].sort_values(ascending=False)
 
 col3, col4 = st.columns(2)
 
