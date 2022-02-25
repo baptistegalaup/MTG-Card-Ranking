@@ -35,5 +35,8 @@ def num(df):
   
   return dfnum
   
+gitviewmod = gitview.apply(dfnum)
 
+gitviewmod
+  
 # gitview.loc[(gitview['Color'] == color) & (gitview['Rarity'] == 'Common' & (gitview['GIH WR'] >= 60%)
