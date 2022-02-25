@@ -31,7 +31,7 @@ for i in color:
   
   color = i
   
-card2 = st.text.input('Card2(Optionnal)')
+card2 = st.text.input('Card2')
 
 proc3 = gihwr['Name'].str.contains(card2.title())
 proc4 = gihwr[proc3]
