@@ -36,15 +36,26 @@ for i in color:
 gitview = gitview.replace({'GIH WR': r'%'}, {'GIH WR' : ''}, regex=True)
 gitview['GIH WR'] = gitview['GIH WR'].apply(float)
 
-st.write('Best Common with the same color')
+st.write()
 
 supportc = gitview.loc[(gitview['Color'] == color) & (gitview['Rarity'] == 'C') & (gitview['GIH WR'] >= 50)]
-
-supportc[['Name', 'GIH WR']]
-
-st.write('Best Uncommon with the same color')
-
 supportu = gitview.loc[(gitview['Color'] == color) & (gitview['Rarity'] == 'U') & (gitview['GIH WR'] >= 50)]
 
-supportu[['Name', 'GIH WR']]
+col1, col2 = st.columns(2)
+
+whith col1:
+  
+  st.header('Best Common with the same color')
+  st.write(supportc[['Name', 'GIH WR']])
+
+with col2:
+  
+  st.header('Best Uncommon with the same color')
+  st.write(supportu[['Name', 'GIH WR']])
+  
+ 
+
+
+
+
 
