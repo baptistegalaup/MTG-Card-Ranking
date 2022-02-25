@@ -53,6 +53,21 @@ with col2:
   st.header('Best Uncommon with the same color')
   st.write(supportu[['Name', 'GIH WR']])
   
+univsupportc = gitview.loc[(gitview['Rarity'] == 'C') & (gitview['GIH WR'] >= 50)]
+univsupportu = gitview.loc[(gitview['Rarity'] == 'U') & (gitview['GIH WR'] >= 50)]
+
+col3, col4 = st.columns(2)
+
+with col3:
+  
+  st.header('Best Common in any Color')
+  st.write(univsupportc[['Name', 'GIH WR']])
+
+whith col4:
+  
+  st.header('Best Uncommon in any Color')
+  st.write(univsupportu[['Name', 'GIH WR']])
+  
  
 
 
