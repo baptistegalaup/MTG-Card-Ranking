@@ -43,7 +43,7 @@ supportu = gitview.loc[(gitview['Color'] == color) & (gitview['Rarity'] == 'U') 
 
 col1, col2 = st.columns(2)
 
-whith col1:
+with col1:
   
   st.header('Best Common with the same color')
   st.write(supportc[['Name', 'GIH WR']])
