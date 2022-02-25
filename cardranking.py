@@ -28,15 +28,9 @@ st.write(proc2)
 
 color = proc2['Color']
 
-def num(df):
-  
-  dfnum = df['GIH WR'].replace('%', '')
-  dfnum['GIH WR'] = int(dfnum['GIH WR'])
-  
-  return dfnum
-  
-gitviewmod = gitview.apply(num)
+gitview['gihwrnum'] = gitview['GIH WR'].apply(replace('%',''))
+gitview['gihwrnum'] = gitview['gihwrnum'].apply(int)
 
-gitviewmod
-  
+gitview
+
 # gitview.loc[(gitview['Color'] == color) & (gitview['Rarity'] == 'Common' & (gitview['GIH WR'] >= 60%)
