@@ -38,4 +38,4 @@ gitview['GIH WR'] = gitview['GIH WR'].apply(float)
 
 support1 = gitview.loc[(gitview['Color'] == color) & (gitview['Rarity'] == 'C') & (gitview['GIH WR'] >= 50)]
 
-support1['Name']
+support1[['Name', 'GIH WR']]
