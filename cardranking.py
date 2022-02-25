@@ -31,4 +31,5 @@ color = proc2['Color']
 gitview = gitview.replace({'GIH WR': r'%'}, {'GIH WR' : ''}, regex=True)
 gitview['GIH WR'] = gitview['GIH WR'].apply(float)
 
-gitview.loc[(gitview['Color'] == color) & (gitview['Rarity'] == 'Common') & (gitview['GIH WR'] >= 60)]
+proc3 = gitview.loc[(gitview['Color'] == color) & (gitview['Rarity'] == 'Common')]
+proc3 =  proc3.loc[proc3['GIH WR'] >= 60]
