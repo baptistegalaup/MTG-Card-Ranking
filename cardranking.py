@@ -36,8 +36,6 @@ for i in color:
 gitview = gitview.replace({'GIH WR': r'%'}, {'GIH WR' : ''}, regex=True)
 gitview['GIH WR'] = gitview['GIH WR'].apply(float)
 
-support1 = gitview.loc[(gitview['Color'] == color) & (gitview['Rarity'] == 'Common')]
-
- # & (gitview['GIH WR'] >= 50)
+support1 = gitview.loc[(gitview['Color'] == color) & (gitview['Rarity'] == 'C') & (gitview['GIH WR'] >= 50)]
 
 support1['Name']
