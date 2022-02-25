@@ -22,7 +22,7 @@ cola, colb = st.columns(2)
   
 with cola:
   
-  card1 = st.text_input('Card 1')
+  card1 = st.text_input(placeholder ='Card 1')
 
 proc1 = gihwr['Name'].str.contains(card1.title())
 proc2 = gihwr[proc1]
