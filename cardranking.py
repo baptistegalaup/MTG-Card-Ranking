@@ -26,10 +26,13 @@ proc2 = gihwr[proc1]
 
 st.write(proc2)
 
-color = str(proc2['Color'])
+color = proc2['Color']
 
-
-st.write(color)
+for i in color:
+  
+  color = i
+  
+ st.write(color)
 
 gitview = gitview.replace({'GIH WR': r'%'}, {'GIH WR' : ''}, regex=True)
 gitview['GIH WR'] = gitview['GIH WR'].apply(float)
