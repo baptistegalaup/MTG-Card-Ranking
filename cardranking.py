@@ -14,7 +14,7 @@ import pandas as pd
 st.title("Card Ranking Comparison Tool")
 
 gitview = pd.read_csv('https://raw.githubusercontent.com/baptistegalaup/MTG-Card-Ranking/main/log2302.csv', sep=",")
-gihwr = gitview[['Name', 'GIH WR']]
+gihwr = gitview[['Name', 'GIH WR', 'Color']]
 
 # gitview
 
@@ -26,5 +26,3 @@ proc2 = gihwr[proc1]
 
 st.write(proc2)
 
-
-gitview[proc1]
