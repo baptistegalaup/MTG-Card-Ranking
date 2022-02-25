@@ -21,7 +21,6 @@ gihwr = gitview[['Name', 'GIH WR', 'Color']]
 card1 = st.text_input('Card 1')
 
 proc1 = gihwr['Name'].str.contains(card1.title())
-
 proc2 = gihwr[proc1]
 
 st.write(proc2)
@@ -31,6 +30,13 @@ color = proc2['Color']
 for i in color:
   
   color = i
+  
+card2 = st.text.input('Card2(Optionnal)')
+
+proc3 = gihwr['Name'].str.contains(card2.title())
+proc4 = gihwr[proc3]
+
+st.write(proc4)
 
 
 gitview = gitview.replace({'GIH WR': r'%'}, {'GIH WR' : ''}, regex=True)
