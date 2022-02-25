@@ -35,7 +35,7 @@ def num(df):
   
   return dfnum
   
-gitviewmod = gitview.apply(dfnum)
+gitviewmod = gitview.apply(num)
 
 gitviewmod
   
