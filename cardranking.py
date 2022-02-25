@@ -20,8 +20,8 @@ gihwr = gitview[['Name', 'GIH WR']
 
 card1 = st.text_input('Card 1')
 
-proc1 = gitview['Name'].str.contains(card1.title())
+proc1 = gihwr['Name'].str.contains(card1.title())
 
-proc2 = gitview[proc1]
+proc2 = gihwr[proc1]
 
 st.write(proc2)
