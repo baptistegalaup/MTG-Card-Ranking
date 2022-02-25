@@ -22,7 +22,6 @@ cola, colb = st.columns(2)
   
 with cola:
   
-  st.header('Card 1')
   card1 = st.text_input('Card 1')
 
 proc1 = gihwr['Name'].str.contains(card1.title())
