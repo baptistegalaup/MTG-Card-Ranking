@@ -17,19 +17,13 @@ gitview = pd.read_csv('https://raw.githubusercontent.com/baptistegalaup/MTG-Card
 gihwr = gitview[['Name', 'GIH WR', 'Color']]
 
 # gitview
-
-cola, colb = st.columns(2)
-  
-with cola:
   
   card1 = st.text_input('Card 1')
 
 proc1 = gihwr['Name'].str.contains(card1.title())
 proc2 = gihwr[proc1]
 
-with colb:
-  
-  st.write(proc2)
+st.write(proc2)
 
 color = proc2['Color']
 
