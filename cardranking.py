@@ -18,12 +18,19 @@ gihwr = gitview[['Name', 'GIH WR', 'Color']]
 
 # gitview
 
-card1 = st.text_input('Card 1')
+cola, colb = st.columns(2)
+  
+with cola:
+  
+  st.header('Card 1')
+  card1 = st.text_input('Card 1')
 
 proc1 = gihwr['Name'].str.contains(card1.title())
 proc2 = gihwr[proc1]
 
-st.write(proc2)
+with colb:
+  
+  st.write(proc2)
 
 color = proc2['Color']
 
