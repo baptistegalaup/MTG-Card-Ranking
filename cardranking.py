@@ -25,3 +25,6 @@ proc1 = gihwr['Name'].str.contains(card1.title())
 proc2 = gihwr[proc1]
 
 st.write(proc2)
+
+
+gitview[proc1]
