@@ -41,3 +41,6 @@ supportc = gitview.loc[(gitview['Color'] == color) & (gitview['Rarity'] == 'C') 
 supportc[['Name', 'GIH WR']]
 
 supportu = gitview.loc[(gitview['Color'] == color) & (gitview['Rarity'] == 'U') & (gitview['GIH WR'] >= 50)]
+
+supportu[['Name', 'GIH WR']]
+
