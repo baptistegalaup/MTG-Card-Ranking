@@ -27,6 +27,7 @@ proc2 = gihwr[proc1]
 st.write(proc2)
 
 color = proc2['Color']
+color = str(color)
 
 st.write(color)
 
