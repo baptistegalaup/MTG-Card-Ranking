@@ -32,7 +32,6 @@ for i in color:
   
   color = i
 
-st.write(i)
 
 gitview = gitview.replace({'GIH WR': r'%'}, {'GIH WR' : ''}, regex=True)
 gitview['GIH WR'] = gitview['GIH WR'].apply(float)
