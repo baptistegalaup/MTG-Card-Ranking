@@ -28,6 +28,6 @@ st.write(proc2)
 
 color = proc2['Color']
 
-st.write(gitview['GIH WR'].type)
+st.write(gitview['GIH WR'].dtype)
 
 # gitview.loc[(gitview['Color'] == color) & (gitview['Rarity'] == 'Common' & (gitview['GIH WR'] >= 60%)
