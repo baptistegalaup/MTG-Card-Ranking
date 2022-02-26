@@ -3,9 +3,12 @@
 
 # In[1]:
 
+# Librairies
 
 import streamlit as st
 import pandas as pd
+
+# Setup
 
 st.title('Card Ranking Comparison Tool V2')
 
@@ -14,45 +17,65 @@ gihwr = gitview[['Name', 'GIH WR', 'Color']]
 
 pool = pd.DataFrame(columns=['Name','GIH WR'])
 
-card1 = st.text_input('Card 1')
+# Body
 
-proc1 = gihwr['Name'].str.contains(card1.title())
-proc2 = gihwr[proc1]
+col1, col2 = st.columns(2)
 
-st.write(proc2[['Name', 'GIH WR']])
+with col1:
 
-if st.button('Click here to add the previous results to your pool'):
-  
-  pool = pd.concat([pool, proc2[['Name', 'GIH WR']]])
+  card1 = st.text_input('Card 1')
+
+  proc1 = gihwr['Name'].str.contains(card1.title())
+  proc2 = gihwr[proc1]
+
+  st.write(proc2[['Name', 'GIH WR']])
+
+  if st.button('Click here to add the previous results to your pool'):
+
+    pool = pd.concat([pool, proc2[['Name', 'GIH WR']]])
 
 
-#presetting the color matching with other good drops
-color = proc2['Color']
+  #presetting the color matching with other good drops
+  color = proc2['Color']
 
-for i in color:
-  
-  color = i
-  
-  
-card2 = st.text_input('Card 2')
+  for i in color:
 
-proc3 = gihwr['Name'].str.contains(card2.title())
-proc4 = gihwr[proc3]
+    color = i
 
-st.write(proc4[['Name', 'GIH WR']])
 
-card3 = st.text_input('Card 3')
+  card2 = st.text_input('Card 2')
 
-proc5 = gihwr['Name'].str.contains(card3.title())
-proc6 = gihwr[proc5]
+  proc3 = gihwr['Name'].str.contains(card2.title())
+  proc4 = gihwr[proc3]
 
-st.write(proc6[['Name', 'GIH WR']])
+  st.write(proc4[['Name', 'GIH WR']])
 
-card4 = st.text_input('Card 4')
+  if st.button('Click here to add the previous results to your pool'):
 
-proc7 = gihwr['Name'].str.contains(card4.title())
-proc8 = gihwr[proc7]
+    pool = pd.concat([pool, proc4[['Name', 'GIH WR']]])
 
-st.write(proc8[['Name', 'GIH WR']])
+  card3 = st.text_input('Card 3')
 
-pool
+  proc5 = gihwr['Name'].str.contains(card3.title())
+  proc6 = gihwr[proc5]
+
+  st.write(proc6[['Name', 'GIH WR']])
+
+  if st.button('Click here to add the previous results to your pool'):
+
+    pool = pd.concat([pool, proc6[['Name', 'GIH WR']]])
+
+  card4 = st.text_input('Card 4')
+
+  proc7 = gihwr['Name'].str.contains(card4.title())
+  proc8 = gihwr[proc7]
+
+  st.write(proc8[['Name', 'GIH WR']])
+
+  if st.button('Click here to add the previous results to your pool'):
+
+    pool = pd.concat([pool, proc8[['Name', 'GIH WR']]])
+
+with col2:
+ 
+  st.write(pool)
