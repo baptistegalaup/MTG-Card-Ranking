@@ -21,6 +21,9 @@ proc2 = gihwr[proc1]
 st.write(proc2[['Name', 'GIH WR']])
 
 
+#presetting the color matching with other good drops
+color = proc2['Color']
+
 for i in color:
   
   color = i
