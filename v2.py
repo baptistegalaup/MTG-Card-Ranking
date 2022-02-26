@@ -17,4 +17,4 @@ proc1 = gitview['Name'].str.contains(card1.title())
 proc2 = gitview[proc1]
 proc3 = proc2[['Name', 'GIH WR']]
 
-proc3
+proc3.head()
