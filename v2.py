@@ -82,5 +82,5 @@ with col2:
     
 with col3:
  
-  st.header('Your Pool')
+  st.write('Your Pool')
   st.write(pool)
