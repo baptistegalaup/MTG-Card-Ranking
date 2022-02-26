@@ -12,9 +12,7 @@ st.title('Card Ranking Comparison Tool V2')
 gitview = pd.read_csv('https://raw.githubusercontent.com/baptistegalaup/MTG-Card-Ranking/main/log2602.csv', sep=",")
 gihwr = gitview[['Name', 'GIH WR', 'Color']]
 
-pool = pd.DataFrame()
-pool.columns = ['Name', 'GIH WR']
-
+pool = pd.DataFrame(columns=['Name','GIH WR'])
 
 card1 = st.text_input('Card 1')
 
