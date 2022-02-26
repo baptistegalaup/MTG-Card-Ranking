@@ -78,7 +78,7 @@ with col1:
 
 with col2:
   
-  continue
+  st.write()
     
 with col3:
  
