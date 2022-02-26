@@ -81,3 +81,7 @@ with col2:
  
   st.write('Your Pool')
   st.write(pool)
+
+  if st.button('WARNING : Click here to reset your pool'):
+    
+    pool = pd.DataFrame(columns=['Name','GIH WR'])
