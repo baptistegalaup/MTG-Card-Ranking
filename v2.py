@@ -35,7 +35,7 @@ proc9 = proc8[['Name', 'GIH WR']]
 
 st.write(proc9.head(5))
 
-card4 = st.text_input('Card 5')
+card4 = st.text_input('Card 4')
 
 proc10 = gitview['Name'].str.contains(card1.title())
 proc11 = gitview[proc10]
