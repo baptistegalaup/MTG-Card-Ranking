@@ -11,10 +11,14 @@ import pandas as pd
 # In[2]:
 
 
+
 st.title("Card Ranking Comparison Tool")
 
 gitview = pd.read_csv('https://raw.githubusercontent.com/baptistegalaup/MTG-Card-Ranking/main/log2302.csv', sep=",")
 gihwr = gitview[['Name', 'GIH WR', 'Color']]
+
+pool = pd.DataFrame()
+pool.columns = ['Name', 'GIH WR']
 
 # gitview
   
@@ -24,6 +28,11 @@ proc1 = gihwr['Name'].str.contains(card1.title())
 proc2 = gihwr[proc1]
 
 st.write(proc2[['Name', 'GIH WR']])
+
+if st.button('Click here to add the previous results to your pool'):
+  
+  pool = pool + proc2[['Name', 'GIH WR']]
+  
 
 color = proc2['Color']
 
