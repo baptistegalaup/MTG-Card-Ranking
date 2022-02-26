@@ -54,3 +54,5 @@ proc7 = gihwr['Name'].str.contains(card4.title())
 proc8 = gihwr[proc7]
 
 st.write(proc8[['Name', 'GIH WR']])
+
+pool
