@@ -12,6 +12,9 @@ st.title('Card Ranking Comparison Tool V2')
 gitview = pd.read_csv('https://raw.githubusercontent.com/baptistegalaup/MTG-Card-Ranking/main/log2602.csv', sep=",")
 gihwr = gitview[['Name', 'GIH WR', 'Color']]
 
+pool = pd.DataFrame()
+pool.columns = ['Name', 'GIH WR']
+
 
 card1 = st.text_input('Card 1')
 
@@ -19,6 +22,10 @@ proc1 = gihwr['Name'].str.contains(card1.title())
 proc2 = gihwr[proc1]
 
 st.write(proc2[['Name', 'GIH WR']])
+
+if st.button('Click here to add the previous results to your pool'):
+  
+  pool = pool + proc2[['Name', 'GIH WR']]
 
 
 #presetting the color matching with other good drops
