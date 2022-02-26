@@ -19,7 +19,7 @@ pool = pd.DataFrame(columns=['Name','GIH WR'])
 
 # Body
 
-col1, col2 = st.columns(2)
+col1, col2, col3 = st.columns(3)
 
 with col1:
 
@@ -77,5 +77,9 @@ with col1:
     pool = pd.concat([pool, proc8[['Name', 'GIH WR']]])
 
 with col2:
+  
+  continue
+    
+with col3:
  
   st.write(pool)
