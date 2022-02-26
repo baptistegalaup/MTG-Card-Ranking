@@ -30,7 +30,7 @@ with col1:
 
   st.write(proc2[['Name', 'GIH WR']])
 
-  if st.button('Click here to add the previous results to your pool'):
+  if st.button('Click here to add the previous results to your pool', key=1):
 
     pool = pd.concat([pool, proc2[['Name', 'GIH WR']]])
 
@@ -50,7 +50,7 @@ with col1:
 
   st.write(proc4[['Name', 'GIH WR']])
 
-  if st.button('Click here to add the previous results to your pool'):
+  if st.button('Click here to add the previous results to your pool', key=2):
 
     pool = pd.concat([pool, proc4[['Name', 'GIH WR']]])
 
@@ -61,7 +61,7 @@ with col1:
 
   st.write(proc6[['Name', 'GIH WR']])
 
-  if st.button('Click here to add the previous results to your pool'):
+  if st.button('Click here to add the previous results to your pool', key=3):
 
     pool = pd.concat([pool, proc6[['Name', 'GIH WR']]])
 
@@ -72,7 +72,7 @@ with col1:
 
   st.write(proc8[['Name', 'GIH WR']])
 
-  if st.button('Click here to add the previous results to your pool'):
+  if st.button('Click here to add the previous results to your pool', key=4):
 
     pool = pd.concat([pool, proc8[['Name', 'GIH WR']]])
 
