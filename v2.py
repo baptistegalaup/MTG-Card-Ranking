@@ -9,7 +9,7 @@ import pandas as pd
 
 st.title('Card Ranking Comparison Tool V2')
 
-gitview = pd.read_csv('https://raw.githubusercontent.com/baptistegalaup/MTG-Card-Ranking/main/log2302.csv', sep=",")
+gitview = pd.read_csv('https://raw.githubusercontent.com/baptistegalaup/MTG-Card-Ranking/main/log2602.csv', sep=",")
 gihwr = gitview[['Name', 'GIH WR', 'Color']]
 
 
