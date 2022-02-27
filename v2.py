@@ -71,7 +71,7 @@ with col2:
   
   st.session_state.pool
 
-  if st.button('Click here to reset your pool', on_click=reset):
+  if st.button('Click here to reset your pool'):
     
     del = st.selectbox('Are You Sure?', ('No', 'Yes'))
     
