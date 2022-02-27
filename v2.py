@@ -47,14 +47,6 @@ with col1:
 #    pool = pd.concat([pool, proc2[['Name', 'GIH WR']]])
 
 
-  #presetting the color matching with other good drops
-  color = proc2['Color']
-
-  for i in color:
-
-    color = i
-
-
   card2 = st.text_input('Card 2')
 
   proc3 = gihwr['Name'].str.contains(card2.title())
@@ -71,7 +63,7 @@ with col2:
  
   st.write('Your Pool')
   
-  st.write(pool)
+  st.session_state.pool
 
 #  if st.button('Click here to reset your pool'):
     
