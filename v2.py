@@ -13,6 +13,9 @@ from PIL import Image
 
 # Setup
 
+image = Image.open('mtg___valakut_exploration_by_aenami_de5ispb-fullview.jpg')
+st.image(image, width=800)
+
 st.title('Card Ranking Comparison Tool V2')
 
 gitview = pd.read_csv('https://raw.githubusercontent.com/baptistegalaup/MTG-Card-Ranking/main/log2602.csv', sep=",")
@@ -69,10 +72,3 @@ with col2:
   st.session_state.pool
 
   st.button('Click here to reset your pool', on_click=reset)
-  
-  
-# Image
-
-  image = Image.open('mtg___valakut_exploration_by_aenami_de5ispb-fullview.jpg')
-
-  st.image(image, width=800)
