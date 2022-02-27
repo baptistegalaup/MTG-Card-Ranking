@@ -53,37 +53,15 @@ with col1:
 
   if st.button('Click here to add the previous results to your pool', key=2):
 
-    pool = pd.concat([pool, proc4[['Name', 'GIH WR']]])
-
-  card3 = st.text_input('Card 3')
-
-  proc5 = gihwr['Name'].str.contains(card3.title())
-  proc6 = gihwr[proc5]
-
-  st.write(proc6[['Name', 'GIH WR']])
-
-  if st.button('Click here to add the previous results to your pool', key=3):
-
-    pool = pd.concat([pool, proc6[['Name', 'GIH WR']]])
-
-  card4 = st.text_input('Card 4')
-
-  proc7 = gihwr['Name'].str.contains(card4.title())
-  proc8 = gihwr[proc7]
-
-  st.write(proc8[['Name', 'GIH WR']])
-
-  if st.button('Click here to add the previous results to your pool', key=4):
-
-    pool = pd.concat([pool, proc8[['Name', 'GIH WR']]])
+    st.session_state.pool = pd.concat([st.session_state.pool, proc4[['Name', 'GIH WR']]])
 
     
 with col2:
  
   st.write('Your Pool')
   
-  st.write(pool)
+  st.write(st.session_state.pool)
 
   if st.button('Click here to reset your pool'):
     
-    pool = pd.DataFrame(columns=['Name','GIH WR'])
+    st.session_state.pool = pd.DataFrame(columns=['Name','GIH WR'])
