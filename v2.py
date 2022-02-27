@@ -66,4 +66,4 @@ with col2:
   
   st.session_state.pool
 
-st.button('Click here to reset your pool', on_click=reset)
+  st.button('Click here to reset your pool', on_click=reset)
