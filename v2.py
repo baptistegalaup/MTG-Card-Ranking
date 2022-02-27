@@ -8,6 +8,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import SessionState 
 
 # Setup
 
@@ -18,7 +19,6 @@ gihwr = gitview[['Name', 'GIH WR', 'Color']]
 
 pool = pd.DataFrame(columns=['Name','GIH WR'])
 
-session_state = SessionState.get(df=pool)
 
 # Body
 
@@ -35,7 +35,7 @@ with col1:
 
   if st.button('Click here to add the previous results to your pool', key=1):
 
-    session_state.pool = pd.concat([session_state.pool, proc2[['Name', 'GIH WR']]])
+    pool = pd.concat([pool, proc2[['Name', 'GIH WR']]])
 
 
   #presetting the color matching with other good drops
