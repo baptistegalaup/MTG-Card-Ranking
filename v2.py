@@ -25,6 +25,10 @@ def concat1():
   
   st.session_state.pool = pd.concat([st.session_state.pool, proc2[['Name', 'GIH WR']]])
 
+def concat2():
+  
+  st.session_state.pool = pd.concat([st.session_state.pool, proc4[['Name', 'GIH WR']]])
+  
 # Body
 
 col1, col2 = st.columns(2)
@@ -41,9 +45,6 @@ with col1:
   st.button('Click here to add the previous results to your pool', on_click = concat1, key=1)
 
 
-#    pool = pd.concat([pool, proc2[['Name', 'GIH WR']]])
-
-
   card2 = st.text_input('Card 2')
 
   proc3 = gihwr['Name'].str.contains(card2.title())
@@ -51,9 +52,7 @@ with col1:
 
   st.write(proc4[['Name', 'GIH WR']])
 
-  if st.button('Click here to add the previous results to your pool', key=2):
-
-    pool = pd.concat([pool, proc4[['Name', 'GIH WR']]])
+  st.button('Click here to add the previous results to your pool', on_click = concat2, key=2):
 
     
 with col2:
