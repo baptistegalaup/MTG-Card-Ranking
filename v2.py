@@ -16,8 +16,11 @@ st.title('Card Ranking Comparison Tool V2')
 gitview = pd.read_csv('https://raw.githubusercontent.com/baptistegalaup/MTG-Card-Ranking/main/log2602.csv', sep=",")
 gihwr = gitview[['Name', 'GIH WR', 'Color']]
 
-pool = pd.DataFrame(columns=['Name','GIH WR'])
-
+if 'pool' not in st.session_state:
+  
+  st.session_state.pool = pd.DataFrame(columns=['Name','GIH WR'])
+  
+ 
 # Body
 
 col1, col2 = st.columns(2)
