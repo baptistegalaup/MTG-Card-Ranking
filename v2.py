@@ -20,7 +20,7 @@ pool = pd.DataFrame(columns=['Name','GIH WR'])
 
 def concat1(proc2):
 
-  pool = pd.concat([pool, proc2[['Name', 'GIH WR']])
+  pool = pd.concat([pool, proc2[['Name', 'GIH WR']]])
 
 
 
