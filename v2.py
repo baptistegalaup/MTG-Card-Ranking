@@ -15,9 +15,13 @@ st.title('Card Ranking Comparison Tool V2')
 
 gitview = pd.read_csv('https://raw.githubusercontent.com/baptistegalaup/MTG-Card-Ranking/main/log2602.csv', sep=",")
 gihwr = gitview[['Name', 'GIH WR', 'Color']]
-
   
 pool = pd.DataFrame(columns=['Name','GIH WR'])
+
+def concat1(proc2):
+
+  pool = pd.concat([pool, proc2[['Name', 'GIH WR']])
+
 
 
 # Body
@@ -33,7 +37,7 @@ with col1:
 
   st.write(proc2[['Name', 'GIH WR']])
 
-  if st.button('Click here to add the previous results to your pool', key=1):
+  if st.button('Click here to add the previous results to your pool', on_click= concat1, key=1):
 
     pool = pd.concat([pool, proc2[['Name', 'GIH WR']]])
 
