@@ -8,6 +8,8 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+from PIL import Image
+
 
 # Setup
 
@@ -67,3 +69,6 @@ with col2:
   st.session_state.pool
 
   st.button('Click here to reset your pool', on_click=reset)
+  
+  
+# Image
