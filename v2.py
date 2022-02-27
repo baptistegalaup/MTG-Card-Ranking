@@ -22,7 +22,9 @@ if 'pool' not in st.session_state:
   
   st.session_state.pool = pd.DataFrame(columns=['Name','GIH WR'])
 
-
+def concat1():
+  
+  st.session_state.pool = pd.concat([st.session_state.pool, proc2[['Name', 'GIH WR']]])
 
 # Body
 
@@ -37,11 +39,11 @@ with col1:
 
   st.write(proc2[['Name', 'GIH WR']])
 
-  add = st.button('Click here to add the previous results to your pool', key=1)
+  st.button('Click here to add the previous results to your pool', on_click = concat1, key=1)
+  
+  st.session_state.pool
 
-  if add:
-    
-    st.session_state.pool = pd.concat([st.session_state.pool, proc2[['Name', 'GIH WR']]])
+
 #    pool = pd.concat([pool, proc2[['Name', 'GIH WR']]])
 
 
