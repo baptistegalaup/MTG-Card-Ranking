@@ -75,7 +75,7 @@ with col2:
     
     delete = st.selectbox('Are You Sure?', ('No', 'Yes'))
     
-    if del == 'Yes:
+    if delete == 'Yes':
     
       st.session_state.pool = pd.DataFrame(columns=['Name','GIH WR'])
 
