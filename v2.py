@@ -29,6 +29,11 @@ def concat2():
   
   st.session_state.pool = pd.concat([st.session_state.pool, proc4[['Name', 'GIH WR']]])
   
+def reset():
+  
+  st.session_state.pool = pd.DataFrame(columns=['Name','GIH WR'])
+
+  
 # Body
 
 col1, col2 = st.columns(2)
@@ -61,6 +66,4 @@ with col2:
   
   st.session_state.pool
 
-#  if st.button('Click here to reset your pool'):
-    
-#    pool = pd.DataFrame(columns=['Name','GIH WR'])
+st.button('Click here to reset your pool', on_click=reset)
