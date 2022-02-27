@@ -73,9 +73,9 @@ with col2:
 
   if st.button('Click here to reset your pool'):
     
-    delete = st.selectbox('Are You Sure?', ('No', 'Yes'))
+    delete = st.text_input('Type y if you are sure, otherwise type n')
     
-    if delete == 'Yes':
-    
+    if delete == 'y':
+      
       st.session_state.pool = pd.DataFrame(columns=['Name','GIH WR'])
 
