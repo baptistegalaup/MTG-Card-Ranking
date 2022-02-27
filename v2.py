@@ -34,9 +34,9 @@ def concat2():
   
   st.session_state.pool = pd.concat([st.session_state.pool, proc4[['Name', 'GIH WR']]])
   
-#def reset():
+def reset():
   
- # st.session_state.pool = pd.DataFrame(columns=['Name','GIH WR'])
+  st.session_state.pool = pd.DataFrame(columns=['Name','GIH WR'])
 
   
 # Body
@@ -73,9 +73,9 @@ with col2:
 
   if st.button('Click here to reset your pool'):
     
-    delete = st.text_input('Type y if you are sure, otherwise type n')
+    delete = st.selectbox('Are you sure?', ('No', 'Yes')
     
-    if delete == 'y':
+    if delete == 'Yes':
       
-      st.session_state.pool = pd.DataFrame(columns=['Name','GIH WR'])
+      reset()
 
