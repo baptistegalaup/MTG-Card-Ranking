@@ -35,7 +35,7 @@ with col1:
 
   if st.button('Click here to add the previous results to your pool', key=1):
 
-    session_state.pool = session_state.pd.concat([pool, proc2[['Name', 'GIH WR']]])
+    session_state.pool = pd.concat([session_state.pool, proc2[['Name', 'GIH WR']]])
 
 
   #presetting the color matching with other good drops
