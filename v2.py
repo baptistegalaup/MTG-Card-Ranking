@@ -14,7 +14,7 @@ from PIL import Image
 # Setup
 
 image = Image.open('mtg___valakut_exploration_by_aenami_de5ispb-fullview.jpg')
-st.image(image, width=800)
+st.image(image)
 
 st.title('Card Ranking Comparison Tool V2')
 
