@@ -73,9 +73,7 @@ with col2:
 
   if st.button('Click here to reset your pool'):
     
-    delete = st.selectbox('Are you sure?', ('No', 'Yes'))
+    st.selectbox('Are you sure?', ('No', 'Yes'), on_change=reset())
     
-    if delete == 'Yes':
-      
-      reset()
+ 
 
