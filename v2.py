@@ -21,9 +21,9 @@ st.title('Card Ranking Comparison Tool V2')
 gitview = pd.read_csv('https://raw.githubusercontent.com/baptistegalaup/MTG-Card-Ranking/main/log2602.csv', sep=",")
 gihwr = gitview[['Name', 'GIH WR', 'Color']]
 
-gihwr['GIHWRMOD'] = gihwr['GIH WR']
-gihwr['GIHWRMOD'] = gihwr.replace({'GIHWRMOD':r'%'}, {'GIHWRMOD' : ''}, regex=True)
-gihwr['GIHWRMOD'] = gihwr['GIHWRMOD'].apply(float)                                                          
+gitview['GIHWRMOD'] = gitview['GIH WR']
+gitview['GIHWRMOD'] = gitview.replace({'GIHWRMOD':r'%'}, {'GIHWRMOD' : ''}, regex=True)
+gitview['GIHWRMOD'] = gitview['GIHWRMOD'].apply(float)                                                          
   
 
 if 'pool' not in st.session_state:
