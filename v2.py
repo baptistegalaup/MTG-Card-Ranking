@@ -52,7 +52,7 @@ with col1:
 
   st.write(proc4[['Name', 'GIH WR']])
 
-  st.button('Click here to add the previous results to your pool', on_click = concat2, key=2):
+  st.button('Click here to add the previous results to your pool', on_click = concat2, key=2)
 
     
 with col2:
