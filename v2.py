@@ -34,7 +34,7 @@ with col1:
 
   if st.button('Click here to add the previous results to your pool', key=1):
 
-    pool.add_rows(proc2[['Name', 'GIH WR']])
+    pool = pd.concat([pool, proc2[['Name', 'GIH WR']]])
 
 
   #presetting the color matching with other good drops
@@ -52,7 +52,7 @@ with col1:
 
   st.write(proc4[['Name', 'GIH WR']])
 
-  if st.button('Click here to add the previous results to your pool', key=1):
+  if st.button('Click here to add the previous results to your pool', key=2):
 
     pool = pd.concat([pool, proc4[['Name', 'GIH WR']]])
 
