@@ -19,7 +19,7 @@ gihwr = gitview[['Name', 'GIH WR', 'Color']]
   
 pool = pd.DataFrame(columns=['Name','GIH WR'])
 
- 
+
 # Body
 
 col1, col2 = st.columns(2)
