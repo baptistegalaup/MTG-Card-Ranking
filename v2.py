@@ -20,7 +20,7 @@ pool = pd.DataFrame(columns=['Name','GIH WR'])
 
 if 'pool' not in st.session_state:
   
-  st.session.state.pool = pd.DataFrame(columns=['Name','GIH WR'])
+  st.session_state.pool = pd.DataFrame(columns=['Name','GIH WR'])
 
 
 
