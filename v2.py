@@ -72,3 +72,5 @@ with col2:
   
   
 # Image
+
+image = Image.open(r'C:\Users\Baptiste\Documents\Projets autour de MTG\Projet card ranking\mtg___valakut_exploration_by_aenami_de5ispb-fullview.jpg')
