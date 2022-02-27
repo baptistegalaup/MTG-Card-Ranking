@@ -18,7 +18,7 @@ gihwr = gitview[['Name', 'GIH WR', 'Color']]
 
 pool = pd.DataFrame(columns=['Name','GIH WR'])
 
-session_state = st.session_state.get(df=pool)
+session_state = st.session_state.get(pool)
 
 # Body
 
