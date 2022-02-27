@@ -8,7 +8,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-from pil import Image
+import pil
 
 
 # Setup
