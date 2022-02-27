@@ -18,6 +18,11 @@ gihwr = gitview[['Name', 'GIH WR', 'Color']]
   
 pool = pd.DataFrame(columns=['Name','GIH WR'])
 
+if 'pool' not in st.session_state:
+  
+  st.session.state.pool = pd.DataFrame(columns=['Name','GIH WR'])
+
+
 
 # Body
 
@@ -32,9 +37,12 @@ with col1:
 
   st.write(proc2[['Name', 'GIH WR']])
 
-  if st.button('Click here to add the previous results to your pool', key=1):
+  add = st.button('Click here to add the previous results to your pool', key=1)
 
-    pool = pd.concat([pool, proc2[['Name', 'GIH WR']]])
+  if add:
+    
+    st.session_state.pool = pd.concat([st.session_state.pool, proc2[['Name', 'GIH WR']]])
+#    pool = pd.concat([pool, proc2[['Name', 'GIH WR']]])
 
 
   #presetting the color matching with other good drops
