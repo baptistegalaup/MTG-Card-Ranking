@@ -16,15 +16,9 @@ st.title('Card Ranking Comparison Tool V2')
 gitview = pd.read_csv('https://raw.githubusercontent.com/baptistegalaup/MTG-Card-Ranking/main/log2602.csv', sep=",")
 gihwr = gitview[['Name', 'GIH WR', 'Color']]
 
-if 'pool' not in st.session_state:
   
-  st.session_state.pool = pd.DataFrame(columns=['Name','GIH WR'])
+pool = pd.DataFrame(columns=['Name','GIH WR'])
 
-def new_pool_changed():
-  
-  if st.session_state.new_pool:
-    
-    st.session_state.pool = pd.concat([st.session_state.pool, st.session_state.new_pool])
  
 # Body
 
@@ -39,7 +33,7 @@ with col1:
 
   st.write(proc2[['Name', 'GIH WR']])
 
-  if st.button('Click here to add the previous results to your pool', on_change=new_pool_changed, key=1):
+  if st.button('Click here to add the previous results to your pool', key=1):
 
     pool = pd.concat([pool, proc2[['Name', 'GIH WR']]])
 
@@ -68,7 +62,7 @@ with col2:
  
   st.write('Your Pool')
   
-  st.write(st.session_state.pool)
+  st.write(pool)
 
 #  if st.button('Click here to reset your pool'):
     
