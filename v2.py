@@ -22,7 +22,7 @@ gitview = pd.read_csv('https://raw.githubusercontent.com/baptistegalaup/MTG-Card
 gihwr = gitview[['Name', 'GIH WR', 'Color']]
 
 gihwr['GIHWRMOD'] = gihwr['GIH WR']
-gihwr['GIHWRMOD'] = gihwr.replace({'GIHWRMOD':r'%'}, {'GIHWRMOD : ''}, regex=True)
+gihwr['GIHWRMOD'] = gihwr.replace({'GIHWRMOD':r'%'}, {'GIHWRMOD' : ''}, regex=True)
 gihwr['GIHWRMOD'] = gihwr['GIHWRMOD'].apply(float)                                                          
   
 
