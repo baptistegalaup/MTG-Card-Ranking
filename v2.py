@@ -8,7 +8,6 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import SessionState 
 
 # Setup
 
@@ -19,6 +18,7 @@ gihwr = gitview[['Name', 'GIH WR', 'Color']]
 
 pool = pd.DataFrame(columns=['Name','GIH WR'])
 
+session_state = st.session_state.get(df=pool)
 
 # Body
 
