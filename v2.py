@@ -75,4 +75,4 @@ with col2:
 
 image = Image.open('mtg___valakut_exploration_by_aenami_de5ispb-fullview.jpg')
 
-st.image(image)
+st.image(image, use_column_width='always')
