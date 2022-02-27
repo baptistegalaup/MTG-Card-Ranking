@@ -52,7 +52,7 @@ with col1:
 
   st.write(proc4[['Name', 'GIH WR']])
 
-  if st.button('Click here to add the previous results to your pool', key=2):
+  if st.button('Click here to add the previous results to your pool', key=1):
 
     pool = pd.concat([pool, proc4[['Name', 'GIH WR']]])
 
