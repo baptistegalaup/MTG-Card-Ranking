@@ -9,7 +9,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 from PIL import Image
-pip install streamlit-aggrid
+from streamlit import aggrid
 
 # Setup
 
