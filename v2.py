@@ -9,7 +9,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 from PIL import Image
-from st_aggrid import AgGrid
+import st_aggrid
 
 
 # Setup
