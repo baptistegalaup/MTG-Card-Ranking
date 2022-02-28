@@ -50,11 +50,12 @@ def increment1():
   
   if st.session_state.winrate ==0:
     
-    st.session_state.winrate = float(proc2[['GIHWRMOD'])
+    
+    st.session_state.winrate = float(proc2['GIHWRMOD'])
                                           
   else:
                                         
-    st.session_state.winrate = (st.session_state.winrate + proc2[['GIHWRMOD']) / 2
+    st.session_state.winrate = (st.session_state.winrate + proc2['GIHWRMOD']) / 2
 
   
 # Body
