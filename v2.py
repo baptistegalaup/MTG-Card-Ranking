@@ -29,6 +29,10 @@ gihwr['GIHWRMOD'] = gihwr['GIHWRMOD'].apply(float)
 if 'pool' not in st.session_state:
   
   st.session_state.pool = pd.DataFrame(columns=['Name','GIH WR'])
+  
+if 'winrate' not in st.session_state:
+  
+  st.session_state.winrate = 0
 
 def concat1():
   
@@ -41,6 +45,16 @@ def concat2():
 def reset():
   
   st.session_state.pool = pd.DataFrame(columns=['Name','GIH WR'])
+  
+def increment1():
+  
+  if st.session_state.winrate ==0:
+    
+    st.session_state.winrate = float(proc2[['GIHWRMOD'])
+                                          
+  else:
+                                        
+    st.session_state.winrate = (st.session_state.winrate + float(proc2[['GIHWRMOD'])) / 2
 
   
 # Body
@@ -56,7 +70,7 @@ with col1:
 
   st.write(proc2[['Name', 'GIH WR']])
 
-  st.button('Click here to add the previous results to your pool', on_click = concat1, key=1)
+  st.button('Click here to add the previous results to your pool', on_click = {concat1, increment1}, key=1)
 
 
   card2 = st.text_input('Card 2')
@@ -65,6 +79,8 @@ with col1:
   proc4 = gihwr[proc3]
 
   st.write(proc4[['Name', 'GIH WR']])
+  
+  
 
   st.button('Click here to add the previous results to your pool', on_click = concat2, key=2)
 
@@ -74,7 +90,9 @@ with col2:
   st.write('Your Pool')
   
   st.session_state.pool
-
+     
+  st.session_state.winrate                                                                 
+                                                                                                                                          
   if st.button('Click here to reset your pool'):
     
     st.selectbox('Are you sure?', ('No', 'Yes'), on_change=reset)
