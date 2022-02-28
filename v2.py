@@ -13,8 +13,8 @@ from st_aggrid import AgGrid
 
 # Setup
 
-image = Image.open('mtg___valakut_exploration_by_aenami_de5ispb-fullview.jpg')
-st.image(image, width=1200)
+#image = Image.open('mtg___valakut_exploration_by_aenami_de5ispb-fullview.jpg')
+#st.image(image, width=1200)
 
 st.title('Card Ranking Comparison Tool V2')
 
