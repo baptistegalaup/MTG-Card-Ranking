@@ -113,6 +113,12 @@ with col3:
   st.write('Mythic/Rare')
   
   mythicrare = gihwr.loc[(gihwr['Rarity'] == 'M') | (gihwr['Rarity'] == 'R')]
-  st.write(mythicrare[['Name', 'GIHWRMOD']].head(10))               
+  st.write(mythicrare[['Name', 'GIHWRMOD']].head(9))               
   
- 
+with col4:
+  
+  st.write('Uncommon')
+
+  unco = gihwr.loc[gihwr['Rarity'] == 'U']
+  st.write(unco[['Name', 'GIHWRMOD']].head(9))
+  
