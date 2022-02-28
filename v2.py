@@ -18,10 +18,12 @@ from st_aggrid import AgGrid
 
 st.title('Card Ranking Comparison Tool V2')
 
-gitview = pd.read_csv('https://raw.githubusercontent.com/baptistegalaup/MTG-Card-Ranking/main/log2602.csv', sep=",")
+gitview = pd.read_csv('https://raw.githubusercontent.com/baptistegalaup/MTG-Card-Ranking/main/log2802.csv', sep=",")
 gihwr = gitview[['Name', 'GIH WR', 'Color']]
                                                         
-  
+gihwr['GIHWRMOD'] = gihwr['GIH WR']
+gihwr = gihwr.replace({'GIHWRMOD':r'%'}, {'GIHWRMOD' : ''}, regex=True)
+gihwr['GIHWRMOD'] = gihwr['GIHWRMOD'].apply(float)    
 
 if 'pool' not in st.session_state:
   
@@ -100,6 +102,14 @@ with col2:
   if st.button('Click here to reset your pool'):
     
     st.selectbox('Are you sure?', ('No', 'Yes'), on_change=reset)
-    
  
 
+st.header('Top 10 Cards by Rarity')
+
+col3,col4,col5:
+
+with col3:
+  
+  st.write('Mythic/Rare')
+  
+  st.write(gihwr[['Name', 'GIHWRMOD']].head(10))
