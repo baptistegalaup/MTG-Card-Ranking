@@ -112,4 +112,4 @@ with col3:
   
   st.write('Mythic/Rare')
   
-  st.write(gihwr[['Name', 'GIHWRMOD']].head(10))
+  gihwr[['Name', 'GIHWRMOD']].head(10)
