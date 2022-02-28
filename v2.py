@@ -91,7 +91,7 @@ with col2:
  
   st.write('Your Pool')
   
-  st.session_state.pool[['Name', 'GIH WR']]
+  AgGrid(st.session_state.pool[['Name', 'GIH WR']])
      
   st.session_state.winrate  =  st.session_state.pool['GIHWRMOD'].mean()
   
