@@ -71,7 +71,7 @@ with col1:
 
   st.write(proc2[['Name', 'GIH WR']])
 
-  st.button('Click here to add the previous results to your pool', on_click = {concat1, increment1}, key=1)
+  st.button('Click here to add the previous results to your pool', on_click = 'concat1, increment1', key=1)
 
 
   card2 = st.text_input('Card 2')
