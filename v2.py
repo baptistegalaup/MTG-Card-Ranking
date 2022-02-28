@@ -106,10 +106,13 @@ with col2:
 
 st.header('Top 10 Cards by Rarity')
 
-col3,col4,col5 = st.columns(3)
+col3,col4 = st.columns(2)
 
 with col3:
   
   st.write('Mythic/Rare')
   
-  st.write(gihwr[['Name', 'GIHWRMOD']])
+  mythicrare = gihwr.loc[(gihwr['Rarity'] == 'M') | (gihwr['Rarity'] == 'R')]
+  st.write(mythicrare[['Name', 'GIHWRMOD']].head(10))               
+  
+ 
