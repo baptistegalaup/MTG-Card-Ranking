@@ -106,7 +106,7 @@ with col2:
 
 st.header('Top 10 Cards by Rarity')
 
-col3,col4,col5:
+col3,col4,col5 = st.columns(3)
 
 with col3:
   
