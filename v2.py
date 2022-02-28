@@ -20,15 +20,16 @@ st.title('Card Ranking Comparison Tool V2')
 
 gitview = pd.read_csv('https://raw.githubusercontent.com/baptistegalaup/MTG-Card-Ranking/main/log2602.csv', sep=",")
 gihwr = gitview[['Name', 'GIH WR', 'Color']]
-
-gihwr['GIHWRMOD'] = gihwr['GIH WR']
-gihwr = gihwr.replace({'GIHWRMOD':r'%'}, {'GIHWRMOD' : ''}, regex=True)
-gihwr['GIHWRMOD'] = gihwr['GIHWRMOD'].apply(float)                                                          
+                                                        
   
 
 if 'pool' not in st.session_state:
   
   st.session_state.pool = pd.DataFrame(columns=['Name','GIH WR'])
+  
+st.session_state.pool['GIHWRMOD'] = st.session_state.pool['GIH WR']
+st.session_state.pool = st.session_state.pool.replace({'GIHWRMOD':r'%'}, {'GIHWRMOD' : ''}, regex=True)
+st.session_state.pool['GIHWRMOD'] = st.session_state.pool['GIHWRMOD'].apply(float)  
   
 if 'winrate' not in st.session_state:
   
@@ -46,7 +47,7 @@ def reset():
   
   st.session_state.pool = pd.DataFrame(columns=['Name','GIH WR'])
   
-def increment1():
+def increment():
   
   if st.session_state.winrate ==0:
     
@@ -71,7 +72,7 @@ with col1:
 
   st.write(proc2[['Name', 'GIH WR']])
 
-  st.button('Click here to add the previous results to your pool', on_click = (concat1, increment1), key=1)
+  st.button('Click here to add the previous results to your pool', on_click = concat1, key=1)
 
 
   card2 = st.text_input('Card 2')
