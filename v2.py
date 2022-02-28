@@ -95,7 +95,7 @@ with col2:
      
   st.session_state.winrate  =  st.session_state.pool['GIHWRMOD'].mean()
   
-  st.session_state.winrate 
+  st.write(round(st.session_state.winrate, 2)) 
                                                                                                                                           
   if st.button('Click here to reset your pool'):
     
