@@ -122,3 +122,8 @@ with col4:
   unco = gihwr.loc[gihwr['Rarity'] == 'U']
   st.write(unco[['Name', 'GIHWRMOD']].head(9))
   
+
+st.write('Common')
+
+common = gihwr.loc[gihwr['Rarity'] == 'C']
+st.write(common[['Name', 'GIHWRMOD']].head(9)) 
