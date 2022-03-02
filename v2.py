@@ -18,7 +18,7 @@ from st_aggrid import AgGrid
 
 st.title('Card Ranking Comparison Tool V2')
 
-gitview = pd.read_csv('https://raw.githubusercontent.com/baptistegalaup/MTG-Card-Ranking/main/log2802.csv', sep=",")
+gitview = pd.read_csv('https://raw.githubusercontent.com/baptistegalaup/MTG-Card-Ranking/main/log0203.csv', sep=",")
 gihwr = gitview[['Name', 'GIH WR', 'Color', 'Rarity']]
                                                         
 gihwr['GIHWRMOD'] = gihwr['GIH WR']
