@@ -5,22 +5,32 @@
 
 # Librairies
 
-import streamlit as st
-import pandas as pd
-import numpy as np
-from PIL import Image
-from st_aggrid import AgGrid
+import streamlit as st # necessary in order to run the code on the streamlit webpage
+import pandas as pd # handles the data (csv form)
+import numpy as np # optionnal but might be used by some of the functions
+from PIL import Image # necessary to put external images in the app
+from st_aggrid import AgGrid # a try to put more interactivity in the shown data sheets
 
 # Setup
+
 
 #image = Image.open('mtg___valakut_exploration_by_aenami_de5ispb-fullview.jpg')
 #st.image(image, width=1200)
 
+# title
+
 st.title('Card Ranking Comparison Tool V2')
 
+# data import from the same github directory
+
 gitview = pd.read_csv('https://raw.githubusercontent.com/baptistegalaup/MTG-Card-Ranking/main/log1203.csv', sep=",")
+
+# slice of the original data
+
 gihwr = gitview[['Name', 'GIH WR', 'Color', 'Rarity']]
-                                                        
+
+# add of a column we will work on, in the end will allow us to view the average rate of victory
+
 gihwr['GIHWRMOD'] = gihwr['GIH WR']
 gihwr = gihwr.replace({'GIHWRMOD':r'%'}, {'GIHWRMOD' : ''}, regex=True)
 gihwr['GIHWRMOD'] = gihwr['GIHWRMOD'].apply(float)    
